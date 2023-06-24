@@ -11,14 +11,8 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-	if (name != NULL && f != NULL)
-	{
-		int i = 0;
+	if (name == NULL || f == NULL)
+		return;
 
-		while (name[i] != '\0')
-		{
-			f(name[i]);
-			i++;
-		}
-	}
+	f(name);
 }
